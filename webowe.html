@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="JH">
+    <meta name="Keywords" content="WWW, test">
+    <meta name="Description" content="Strona poświęcona zajęciom WWW">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layoutHaudek.css">
+    <title>Pieseł Generator</title>
+</head>
+
+<body>
+    <header>
+        <h2>PIESEŁ GENERATOR</h2>
+        <nav>
+            <ul>
+                <li><a href="webowe.html">Strona główna</a></li>
+                <li><a href="memes.html">Memes</a></li>
+                <li><a href="photos.html">Zdjęcia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h3>Wypełnij formularz, aby wygenerować Pieseła</h3>
+            <form>
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name" placeholder="Twoje imię">
+
+                <label for="number">Numer Karty</label>
+                <input type="text" id="number" name="number" placeholder="Numer Twojej karty bankowej">
+
+                <label for="date">Data ważności karty</label>
+                <input type="text" id="date" name="date" placeholder="Data ważności karty">
+
+                <label for="code">Kod weryfikacyjny karty (CVV)</label>
+                <input type="text" id="code" name="code" placeholder="Kod CVV">
+
+                <label for="imageType">Wybierz typ obrazu</label>
+                <select id="imageType" name="imageType">
+                    <option value="meme">Mem</option>
+                    <option value="photo">Zdjęcie</option>
+                </select>
+
+                <button type="button" onclick="generateDoge()">WYGENERUJ PIESEŁA</button>
+            </form>
+        </section>
+
+        <section id="result-section" class="hidden">
+            <p>Na podstawie podanych danych oto <span id="chosen"></span> dla Ciebie</p>
+            <img id="dogeImage" src="" alt="Pieseł">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 JH. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
